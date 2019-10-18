@@ -1,6 +1,9 @@
 <h1><%= "#{@employee.first_name} #{@employee.last_name}" %></h1>
- <img src= <%= @employee.img_url %> >
-
+ <img src= <%= @employee.img_url %> ><br>
+ <%= @employee.alias %><br>
+ <%= @employee.title %><br>
+ <%= @employee.office %><br>
+ <%= @employee.dog.name %><br>
 
 <%= form_tag @employee, method: "delete" do %>
   <%= submit_tag "Delete" %>
