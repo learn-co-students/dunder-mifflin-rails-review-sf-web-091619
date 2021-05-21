@@ -1,0 +1,13 @@
+<h1>All Dogs</h1>
+
+<%= form_tag '/dogs', method: 'get' do %>
+  <%= hidden_field_tag :sort, "1" %>
+  <%= submit_tag "Sort by Number of Employees" %>
+<% end %>
+
+<% @dogs.each do |dog| %>
+  <div>
+    <h4><%= link_to dog.name, dog %> (<%= dog.employees.count %> employees)</h4>
+  </div>
+  
+<% end %>
